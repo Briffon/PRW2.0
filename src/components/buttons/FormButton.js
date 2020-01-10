@@ -17,6 +17,8 @@ const styles={
         backgroundColor:'#4095BA',
         color:'white',
         fontSize:'1em',
-        fontWeight:'700'
+        fontWeight:'600',
+        height:'30px'
+        
     }
 }

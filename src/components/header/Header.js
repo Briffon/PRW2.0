@@ -1,10 +1,17 @@
-import React from 'react'
+import React from 'react';
+import './Header.css';
 
 const Header =props=>{
     return(
         <header style={styles.container}>
-            <img width="300px" height="100px" src={require('../../images/logo/PNG/CCG.png')} alt="logo"/>
-            <h1>CCG Admin</h1>
+            <div style={styles.logoContainer}>
+                <img style={styles.logo}width="300px" height="100px" src={require('../../images/logo/PNG/CCG.png')} alt="logo"/>
+                <h1> Admin</h1>
+            </div>
+
+            <form>
+                <input placeholder="Search..."></input>
+            </form>
         </header>
     )
 }
@@ -14,10 +21,23 @@ export default Header;
 const styles={
     container:{
         display:'flex',
-        backgroundColor:'gray',
+        backgroundColor:'green',
         color:'white',
         fontSize:'1.5em',
         textTransform:'uppercase',
-        width:'100%'
+        width:'100%',
+        justifyContent:'space-between',
+        alignItems:'center',
+        alignContent:'center',
+        margin:'auto'
+    },
+    logoContainer:{
+        display:'flex',
+        justifyContent:'flex-start',
+        color:'black',
+        
+    },
+    logo:{
+        margin:'auto',
     }
 }

@@ -23,7 +23,7 @@
 }
 
 .modal input:hover{
-    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 38, 255, 0.67);
+    -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 38, 255, 0.37);
     -moz-box-shadow:    0px 0px 30px 0px rgba(0, 38, 255, 0.67);
     box-shadow:         0px 0px 30px 0px rgba(0, 38, 255, 0.67);
 }

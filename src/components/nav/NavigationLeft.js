@@ -17,5 +17,8 @@ export default NavigationLeft;
 
 const styles={
     container:{
+        width:'12%',
+        backgroundColor:'black',
+        color:'white',
     }
 }

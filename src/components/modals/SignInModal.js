@@ -25,5 +25,8 @@ const styles={
         height:'100%',
         opacity:'0.8',
         display:'flex',
+    },
+    modal:{
+        width:'100%',
     }
 }

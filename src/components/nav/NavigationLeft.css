@@ -1,3 +1,26 @@
-.nav-container{
-    
+a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    font-size: 1.4em;
+}
+
+li img{
+    width:25px;
+    margin-right: 5px;
+}
+
+ul{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-content: center;
+}
+
+li:nth-of-type(1){
+    margin-top: 1rem;
+}
+
+li{
+    margin-bottom: 1rem;
 }

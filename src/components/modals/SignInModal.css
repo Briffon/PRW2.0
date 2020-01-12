@@ -11,6 +11,10 @@
    align-items: center;
 }
 
+.close{
+    display: none !important;
+}
+
 .modal h2{
     text-transform: uppercase;
 }

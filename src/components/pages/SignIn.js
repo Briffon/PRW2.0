@@ -4,6 +4,8 @@ import SignInModal from '../modals/SignInModal';
 import NavigationLeft from '../nav/NavigationLeft';
 import Hero from '../hero/Hero';
 import './SignIn.css'
+import Sales from '../sales/Sales';
+
 class SignIn extends Component{
     render(){
         return(
@@ -13,6 +15,7 @@ class SignIn extends Component{
                     <NavigationLeft />
                     <div style={styles.modalCotainer}>
                         <Hero style={styles.hero}/>
+                        <Sales/>
                         <SignInModal/>
                     </div>
                 </div>

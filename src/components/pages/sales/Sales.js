@@ -66,6 +66,7 @@ class Sales extends Component{
                         <div><Hero style={styles.hero} /></div>
                         <h2>Sales</h2>
                         <div style={styles.cardList}>
+                           {/* Here */}
                             {!isLoaded&&cards.length>0 ? cards.map(card=>{
                                 const{name,price,img}=card;
                                 return <Card name={name} img={img} price={price} />

@@ -1,15 +1,17 @@
 import React from 'react';
 import './NavigationLeft.css'
+import { NavLink } from 'react-router-dom'
+
+//THIS SHOULD BE NAV LINKS WITH NAV ELEMENT
+
 const NavigationLeft=props=>{
     return(
-        <div style={styles.container} className="nav-container">
-            <ul style={styles.list}>
-                <li style={styles.listItem}><img src={require("../../images/home.png")} alt="home icon"/> <a href="google.com">Homepage</a></li>
-                <li style={styles.listItem}> <img src={require("../../images/shelf.png")} alt="inventory icon" /><a href="google.com">Inventory</a></li>
-                <li style={styles.listItem}><img src={require("../../images/analytics.png")} alt="analtyics icon" /><a href="google.com">Analytics</a></li>
-            </ul>
-
-        </div>
+        <nav style={styles.container} className="nav-container">
+            <NavLink to="/Sales" style={styles.listItem}><img src={require("../../images/home.png")} width="25" alt="home icon"/>Sales</NavLink>
+            <NavLink to="/Inventory" style={styles.listItem}> <img src={require("../../images/shelf.png")} width="25" alt="inventory icon" />Inventory</NavLink>
+            <NavLink to="/Analyics" style={styles.listItem}><img src={require("../../images/analytics.png")} width="25" alt="analtyics icon" />Analytics</NavLink>
+            <NavLink to="/SignIn" style={styles.listItem}><img src={require("../../images/analytics.png")} width="25" alt="analtyics icon" />Sign Out</NavLink>
+        </nav>
     )
 }
 
@@ -17,7 +19,9 @@ export default NavigationLeft;
 
 const styles={
     container:{
-        width:'12%',
+        display: 'flex',
+        flexDirection: 'column',
+        width:'15%',
         backgroundColor:'#141414',
         color:'white',
     },

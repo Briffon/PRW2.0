@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Header from '../header/Header';
-import SignInModal from '../modals/SignInModal';
-import NavigationLeft from '../nav/NavigationLeft';
-import Hero from '../hero/Hero';
+import Header from '../../header/Header';
+//import SignInModal from '../modals/SignInModal';
+import NavigationLeft from '../../nav/NavigationLeft';
+import Hero from '../../hero/Hero';
 import './SignIn.css'
-import Sales from '../sales/Sales';
+//import Sales from '../sales/SalesList';
 
 class SignIn extends Component{
     render(){
@@ -13,10 +13,9 @@ class SignIn extends Component{
                 <Header/>
                 <div style={styles.innerContainer}>
                     <NavigationLeft />
-                    <div style={styles.modalCotainer}>
+                    <div style={styles.mainContent}>
                         <Hero style={styles.hero}/>
-                        <Sales/>
-                        <SignInModal/>
+                        {/* <Sales/> */}
                     </div>
                 </div>
             </div>
@@ -46,5 +45,8 @@ const styles={
     hero:{
         margin:'auto'
     }
-
 }
+
+
+// <div style={styles.modalCotainer}>
+// <SignInModal/>

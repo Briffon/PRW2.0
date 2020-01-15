@@ -21,6 +21,7 @@ export default Header;
 const styles={
     container:{
         display:'flex',
+        flexDirection: 'row',
         backgroundColor:'#00E87F',
         color:'white',
         fontSize:'1.5em',
@@ -28,7 +29,6 @@ const styles={
         justifyContent:'space-between',
         alignItems:'center',
         alignContent:'center',
-        margin:'auto'
     },
     logoContainer:{
         display:'flex',

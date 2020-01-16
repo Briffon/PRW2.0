@@ -1,9 +1,9 @@
 .header input{
-    margin-right: 1rem;
+    margin-left: 50rem;
     border-radius: 5px;
     border:none;
     width: 250px;
-    height: 25px;
+    padding:.8rem;
 }
 
 .header h1{
@@ -12,4 +12,19 @@
     font-size: 2.5em;
     margin-left: 1rem;
 
+}
+.user img{
+    border-radius: 5rem;
+    width: 4rem;
+    margin-right: 2rem;
+}
+.user{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+}
+
+.user p{
+    font-size: .8em;
+    margin-right: 1rem;
 }

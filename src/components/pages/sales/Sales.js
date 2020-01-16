@@ -8,13 +8,22 @@ class Sales extends Component{
     state={
         cards:[],
         isLoaded:true,
+        item:[],
+        isLoadedItem:true,
     }
 
     componentDidMount(){
         const isLoaded = this.state.isLoaded;
-        
+        const isLoadedItem=this.state.isLoadedItem;
+
         if(isLoaded){
             this.load();
+        }else{
+            console.log("error");
+        }
+
+        if(isLoadedItem){
+            this.randomUser();
         }else{
             console.log("error");
         }
@@ -55,11 +64,34 @@ class Sales extends Component{
         })
     }
 
+    randomUser(){
+        fetch('https://randomuser.me/api/')
+        .then(res=>{
+            if(res.ok){
+                return res.json();
+            }
+            throw Error(res);
+        })
+        .then(data=>data.results.map(user=>({
+            fname:`${user.name.first} ${user.name.last}`,
+            lname:`${user.name.last}`,
+            picture:`${user.picture.large}`,
+        })))
+        .then(item=>this.setState({
+            item,
+            isLoadedItem:false,
+        }))
+        .catch(err=>console.log("Did not load ", err))
+    }
+
     render(){
-        const{isLoaded,cards} =this.state;
+        const{isLoaded,cards,isLoadedItem,item} =this.state;
         return(
             <div style={styles.container}>
-                <Header/>
+                {!isLoadedItem&&item.length>0 ? item.map(item=>{
+                                const{fname,lname,picture}=item;
+                                return <Header fullname={fname+" "+lname} src={picture}/>
+                            }):null}
                 <div style={styles.innerContainer}>
                     <NavigationLeft />
                     <div style={styles.mainContent}>

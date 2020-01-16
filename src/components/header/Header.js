@@ -8,10 +8,15 @@ const Header =props=>{
                 <img style={styles.logo}width="300px" height="100px" src={require('../../images/logo/PNG/CCG.png')} alt="logo"/>
                 <h1> Admin</h1>
             </div>
-
             <form>
                 <input placeholder="Search..."></input>
             </form>
+            <div className="right">
+                <div className="user">
+                        <p>{props.fullname}</p>
+                        <img src={props.src} alt="user profile picture"/>
+                </div>
+            </div>
         </header>
     )
 }
@@ -29,6 +34,8 @@ const styles={
         justifyContent:'space-between',
         alignItems:'center',
         alignContent:'center',
+        textAlign:'center',
+        
     },
     logoContainer:{
         display:'flex',

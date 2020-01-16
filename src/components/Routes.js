@@ -2,8 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import SignIn from './pages/signIn/SignIn';
 import Sales from './pages/sales/Sales'
-import Analyics from '../components/pages/analyics/Analyics'
 import Inventory from './pages/inventory/Inventory';
+import Analyics from './pages/analyics/Analyics';
 
 
 const Routes = () => {

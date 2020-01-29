@@ -78,18 +78,18 @@ const styles = {
     backgroundColor: "#4EA699",
     padding: "1rem",
     textAlign: "center",
-    color:'white',
-    height:'13%'
+    color: "white",
+    height: "13%"
   },
   icon: {
     margin: "auto",
     marginRight: "1rem",
-    color:'#77ACA2'
+    color: "#77ACA2"
   },
   logo: {
     marginTop: ".5rem"
   },
-  admin:{
-    marginTop:'0',
+  admin: {
+    marginTop: "0"
   }
 };

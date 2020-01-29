@@ -9,7 +9,6 @@ const NavigationLeft = props => {
     <nav style={styles.container} className="nav-container">
       <div style={styles.logoContainer}>
         <img
-          style={styles.logo}
           width="100px"
           height="100px"
           src={require("../../images/logo/PNG/CCG2.png")}

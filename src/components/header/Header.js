@@ -12,7 +12,9 @@ class Header extends Component {
   componentDidMount() {
     const isLoadedItem = this.state.isLoadedItem;
 
-    this.state.page = localStorage.getItem("page");
+    this.setState({
+      page:localStorage.getItem("page")
+    })
 
     if (isLoadedItem) {
       this.randomUser();

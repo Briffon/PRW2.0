@@ -1,10 +1,10 @@
-import React, { Component, useState } from "react";
+import React, { useState } from "react";
 import "./SignInModal.css";
 import { makeStyles } from "@material-ui/core/styles";
 import FacebookIcon from '@material-ui/icons/Facebook';
 import { Modal, Paper, Button } from "@material-ui/core";
 import {MdEmail} from '../../../node_modules/react-icons/md'
-import {FaGoogle} from '../../../node_modules/react-icons/fa'
+import {AiFillGoogleCircle} from '../../../node_modules/react-icons/ai'
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -35,6 +35,7 @@ function SignInModal() {
   const classes = useStyles();
   const [open, setOpen] = useState(false);
   const [modalStyle] = useState(getModalStyle);
+
   const handleOpen = () => {
     setOpen(true);
   };
@@ -47,17 +48,17 @@ function SignInModal() {
         <div style={styles.signUp} className="signUp">
           <h2>Sign Up</h2>
           <p>Already a member? Sign In</p>
-          <Button style={styles.button} className="fb"  variant="contained">
-              <FacebookIcon style={styles.icon}/>
+          <Button onClick={handleOpen} style={styles.button} className="fb"  variant="contained">
+              <FacebookIcon className="icon" style={styles.icon}/>
             Sign Up With FaceBook
           </Button>
           <Button style={styles.button} className="go" variant="contained">
-              <FaGoogle style={styles.icon}/>
+              <AiFillGoogleCircle className="icon" style={styles.icon}/>
             Sign Up With Google
           </Button>
           <p>or</p>
           <Button style={styles.button} className="em" variant="contained">
-              <MdEmail style={styles.icon}/>
+              <MdEmail className="icon" style={styles.icon}/>
             Sign Up With Email
           </Button>
         </div>
@@ -88,30 +89,31 @@ const styles = {
   },
   paper: {
     display: "flex",
-    width: "40%",
+    width: "30%",
     background: "white",
     justifyContent: "center",
     height: "50vh",
     margin: "auto",
-    borderRadius: "10px"
+    borderRadius: "10px",
   },
   button: {
     color:'white',
     fontWeight:'550',
     display:'flex',
-    justifyContent:'center',
     width:'20rem',
     height:'3rem',
-    margin:'1rem'
+    margin:'1rem',
+   position:'relative',
+   fontSize:'1em',
   },
   signUp: {
     display: "flex",
     flexDirection: "column",
     alignItems:'center',
+    marginTop:'1rem'
   },
   icon:{
-    marginRight:'.2rem',
-    marginLeft:'0',
+    position:'absolute',
   }
   //   modal: {
   //     width: "100%"

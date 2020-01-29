@@ -8,7 +8,6 @@ function Inventory() {
   const [cards, setCards] = useState(null);
   // ////  const [page]=useState('Inventory')
   useEffect(() => {
-    localStorage.setItem("page", "Inventory");
     if (cards == null) {
       getCards();
     }
@@ -31,11 +30,12 @@ function Inventory() {
     <div style={styles.container}>
       <NavigationLeft />
       <div style={styles.content}>
+        {localStorage.setItem("page", "Inventory")}
         <Header />
         <div style={styles.cards}>
           {cards != null
             ? cards.data.map((card, index) => {
-                return <Card name={card.name} img={card.image_uris.small} />;
+                return <Card key={index} name={card.name} img={card.image_uris.small} />;
               })
             : null}
         </div>

@@ -4,18 +4,16 @@ import NavigationLeft from "../../nav/NavigationLeft";
 import SignInModal from "../../modals/SignInModal";
 
 class Sales extends Component {
-  state = {
-
-  };
+  state = {};
 
   componentDidMount() {}
 
   render() {
-
     return (
       <div className="container">
         <NavigationLeft />
         <div className="content">
+          {localStorage.setItem("page", "Sign Out")}
           <Header />
           <SignInModal />
         </div>
@@ -25,4 +23,3 @@ class Sales extends Component {
 }
 
 export default Sales;
-

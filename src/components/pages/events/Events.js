@@ -123,10 +123,11 @@ class Events extends Component{
         const showOther=this.state.showOther? 'show':'closed';
         return(
             <div className="container">
-                <NavigationLeft className="leftNav"/>
-                    <div className="container">
-                        <Header/>
-                        <div className={`showWeekly ${showWeekly}`}><EventModal change={this.handleChange} submit={this.submitWeekly} cancel={this.addWeekly}/></div>
+                <NavigationLeft/>
+                    <div className="content">
+                    {localStorage.setItem("page",'Events')}
+                        <Header/> 
+                         <div className={`showWeekly ${showWeekly}`}><EventModal change={this.handleChange} submit={this.submitWeekly} cancel={this.addWeekly}/></div>
                         <div className={`showOther ${showOther}`}><EventModal change={this.handleChange} submit={this.submitOther} cancel={this.addOther}/></div>
                         <section className="weekly">
                         <div className="util">

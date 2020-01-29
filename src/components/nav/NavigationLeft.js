@@ -1,6 +1,11 @@
 import React from "react";
 import "./NavigationLeft.css";
 import { NavLink } from "react-router-dom";
+import { GoGraph } from "react-icons/go";
+import { FaBoxOpen } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
+import { FaDoorOpen } from "react-icons/fa";
+import { MdEvent } from "react-icons/md";
 
 //THIS SHOULD BE NAV LINKS WITH NAV ELEMENT
 
@@ -9,59 +14,36 @@ const NavigationLeft = props => {
     <nav style={styles.container} className="nav-container">
       <div style={styles.logoContainer}>
         <img
-          width="80px"
+          width="200px"
           height="80px"
-          src={require("../../images/logo/PNG/CCG2.png")}
+          src={require("../../images/logo/PNG/CCGW.png")}
           alt="logo"
-          style={styles.icon}
+          style={styles.logo}
         />
-        <h1> Admin</h1>
+        <h1 style={styles.admin}> Admin</h1>
       </div>
-      <NavLink to="/Home" style={styles.listItem}>
-        <img
-          src={require("../../images/dashboard.png")}
-          width="25"
-          alt="home icon"
-          style={styles.icon}
-        />
-        Home
-      </NavLink>
-      <NavLink to="/Inventory" style={styles.listItem}>
-        <img
-          style={styles.icon}
-          src={require("../../images/shelf.png")}
-          width="25"
-          alt="Inventory icon"
-        />
-        Inventory
-      </NavLink>
-      <NavLink to="/Analyics" style={styles.listItem}>
-        <img
-          src={require("../../images/analytics.png")}
-          width="25"
-          alt="Analtyics icon"
-          style={styles.icon}
-        />
-        Analytics
-      </NavLink>
-      <NavLink to="/Events" style={styles.listItem}>
-        <img
-          src={require("../../images/place.png")}
-          width="25"
-          alt="Events icon"
-          style={styles.icon}
-        />
-        Events
-      </NavLink>
-      <NavLink to="/SignIn" style={styles.listItem}>
-        <img
-          src={require("../../images/exit.png")}
-          width="25"
-          alt="Sign In icon"
-          style={styles.icon}
-        />
-        Sign Out
-      </NavLink>
+      <div style={styles.list}>
+        <NavLink to="/Home" style={styles.listItem}>
+          <FaHome style={styles.icon} />
+          Home
+        </NavLink>
+        <NavLink to="/Inventory" style={styles.listItem}>
+          <FaBoxOpen style={styles.icon} />
+          Inventory
+        </NavLink>
+        <NavLink to="/Analyics" style={styles.listItem}>
+          <GoGraph style={styles.icon} />
+          Analytics
+        </NavLink>
+        <NavLink to="/Events" style={styles.listItem}>
+          <MdEvent style={styles.icon} />
+          Events
+        </NavLink>
+        <NavLink to="/SignIn" style={styles.listItem}>
+          <FaDoorOpen style={styles.icon} />
+          Sign Out
+        </NavLink>
+      </div>
     </nav>
   );
 };
@@ -71,33 +53,43 @@ export default NavigationLeft;
 const styles = {
   container: {
     width: "12%",
-    backgroundColor: "#2D2D2D",
+    backgroundColor: "#172121",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     textAlign: "left",
+    border: "none "
   },
   list: {
-    listStyle: "none"
+    listStyle: "none",
+    display: "flex",
+    flexDirection: "column"
   },
   listItem: {
-    textDecoration: "none",
-    underline: "none",
+    display: "inline-block",
+    textAlign: "left",
+    color: "white",
     margin: "1rem",
     fontSize: "1.5em",
-    color:'white'
+    fontWeight: "600",
+    textDecoration: "none"
   },
   logoContainer: {
-    display: "flex",
-    justifyContent: "flex-start",
-    color: "black",
-    marginLeft: "2rem",
-    flexDirection: "column",
+    backgroundColor: "#4EA699",
+    padding: "1rem",
     textAlign: "center",
-    margin: "1rem",
-    marginTop:'1.5rem'
+    color:'white',
+    height:'13%'
   },
   icon: {
-    marginRight: "1rem"
+    margin: "auto",
+    marginRight: "1rem",
+    color:'#77ACA2'
+  },
+  logo: {
+    marginTop: ".5rem"
+  },
+  admin:{
+    marginTop:'0',
   }
 };

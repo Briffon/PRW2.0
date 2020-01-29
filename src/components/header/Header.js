@@ -8,13 +8,15 @@ class Header extends Component {
     isLoadedItem: true,
     page: ""
   };
-
-  componentDidMount() {
-    const isLoadedItem = this.state.isLoadedItem;
-
+  componentWillMount(){
+    console.log("inputed")
     this.setState({
       page:localStorage.getItem("page")
     })
+  }
+
+  componentDidMount() {
+    const isLoadedItem = this.state.isLoadedItem;
 
     if (isLoadedItem) {
       this.randomUser();
@@ -52,7 +54,7 @@ class Header extends Component {
     return (
       <header className="header" style={styles.container}>
         <div style={styles.info}>
-          <InfoIcon style={{ fontSize: 30 }} color="white" />
+          <InfoIcon style={{ fontSize: 30 }}  />
           <h1>{this.state.page}</h1>
         </div>
         <div style={styles.right}>
@@ -69,14 +71,14 @@ class Header extends Component {
               ? item.map((item, index) => {
                   const { picture } = item;
                   return (
-                    <img style={styles.pfp} src={picture} alt="user profile" />
+                    <img key={index} style={styles.pfp} src={picture} alt="user profile" />
                   );
                 })
               : null}
             {!isLoadedItem && item.length > 0
               ? item.map((item, index) => {
                   const { fname } = item;
-                  return <p>{fname}</p>;
+                  return <p key={index} style={styles.txt}>{fname}</p>;
                 })
               : null}
           </div>
@@ -90,12 +92,12 @@ export default Header;
 
 const styles = {
   container: {
-    backgroundColor: "#00E87F",
+    backgroundColor: "#00CE71",
     color: "white",
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    height: "12%"
+    height: "8%"
   },
   logo: {
     margin: "auto"
@@ -113,18 +115,26 @@ const styles = {
   },
   pfp: {
     borderRadius: "5rem",
-    width: "45%",
-    marginTop: "1.5rem"
+    width: "40%",
+    margin:'0',
+    marginTop:'1rem'
   },
   input: {
     backgroundColor: "white",
-    marginRight: "1rem"
+    marginRight: "10rem",
+    width:'100%',
+  
   },
   user: {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     marginRight: "5rem",
-    margin: "1rem"
+    margin: "1rem",
+    fontSize:'.9em',
+    fontWeight:'600'
+  },
+  txt:{
+    marginTop:'0'
   }
 };

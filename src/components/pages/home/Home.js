@@ -7,6 +7,7 @@ import "./Home.css";
 import Data from "../../jsons/events.json";
 import Events from "../../events/Events";
 import Edit from "../../modals/Edit";
+import { Paper } from "@material-ui/core";
 
 class Home extends Component {
   state = {
@@ -199,6 +200,7 @@ class Home extends Component {
       <div className="container">
         <NavigationLeft />
         <div className="content">
+          {localStorage.setItem("page",'Home')}
           <Header />
           <div className={`editModal ${editModal}`}>
             <Edit
@@ -214,7 +216,7 @@ class Home extends Component {
           <div className="contentContainer">
             <div className="sales">
               <h2>Sales</h2>
-              <div className="salesContainer">
+              <Paper style={styles.salesContainer}  elevation={3} color="black" className="salesContainer">
                 {!isLoaded && cards.length > 0
                   ? cards.map((card, index) => {
                       const { name, price, img } = card;
@@ -223,11 +225,11 @@ class Home extends Component {
                       );
                     })
                   : null}
-              </div>
+              </Paper>
             </div>
             <div className="events">
               <h2>Events</h2>
-              <div className="eventsContainer">
+              <Paper style={styles.eventsContainer}  className="eventsContainer">
                 {this.state.Data.weekly.map((event, index) => {
                   return (
                     <Events
@@ -245,7 +247,7 @@ class Home extends Component {
                     />
                   );
                 })}
-              </div>
+              </Paper>
             </div>
           </div>
         </div>
@@ -255,3 +257,15 @@ class Home extends Component {
 }
 
 export default Home;
+
+const styles={
+  salesContainer:{
+    backgroundColor:'#e8e8e8',
+    padding:'1.5rem',
+
+  },
+  eventsContainer:{
+    backgroundColor:'#e8e8e8',
+    padding:'1rem'
+  }
+}

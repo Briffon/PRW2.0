@@ -2,3 +2,39 @@
     background:url('https://miro.medium.com/max/3840/1*_HhnCWCrqDSt__s5wFrKqQ.jpeg') no-repeat;
     background-color: rgba(0, 0, 0, 1);
 }
+
+.fb{
+    background-color: #3b5998 !important;
+}
+
+.go{
+    background-color: #4285F4 !important;
+}
+
+.em{
+    background-color: lightgray !important;
+}
+.signUp p:nth-of-type(2)::before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid black;
+    top: 40%;
+    right: 1.5rem;
+    width: 100px;
+}
+
+.signUp p:nth-of-type(2)::after{
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-bottom: 1px solid black;
+    top: 40%;
+    left: 1.5rem;
+    width: 100px;
+}
+
+
+.signUp p:nth-of-type(2){
+    position: relative;
+}

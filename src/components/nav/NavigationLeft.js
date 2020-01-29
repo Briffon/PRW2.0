@@ -9,8 +9,8 @@ const NavigationLeft = props => {
     <nav style={styles.container} className="nav-container">
       <div style={styles.logoContainer}>
         <img
-          width="100px"
-          height="100px"
+          width="80px"
+          height="80px"
           src={require("../../images/logo/PNG/CCG2.png")}
           alt="logo"
           style={styles.icon}
@@ -75,7 +75,7 @@ const styles = {
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
-    textAlign: "left"
+    textAlign: "left",
   },
   list: {
     listStyle: "none"
@@ -84,7 +84,8 @@ const styles = {
     textDecoration: "none",
     underline: "none",
     margin: "1rem",
-    fontSize: "1.5em"
+    fontSize: "1.5em",
+    color:'white'
   },
   logoContainer: {
     display: "flex",
@@ -93,7 +94,8 @@ const styles = {
     marginLeft: "2rem",
     flexDirection: "column",
     textAlign: "center",
-    margin: "1rem"
+    margin: "1rem",
+    marginTop:'1.5rem'
   },
   icon: {
     marginRight: "1rem"

@@ -122,6 +122,7 @@ class Home extends Component {
     e.preventDefault();
     let key = localStorage.getItem("key");
     const { Data } = this.state;
+    //You should write this different.
     Data[key].title = document.getElementsByClassName("titleInput")[0].value;
     Data[key].entry = document.getElementsByClassName("entryInput")[0].value;
     Data[key].date = document.getElementsByClassName("dateInput")[0].value;
@@ -131,6 +132,44 @@ class Home extends Component {
       Data
     });
   };
+
+  // newCard = e => {
+  //   e.preventDefault()
+  // //Create new card
+  //   const newCard = {
+  //     id: this.state.id,
+  //     title:this.state.title,
+  //     entry:this.state.entry,
+  //     date: this.state.date,
+  //     time: this.state.time
+  //   };
+  //   console.log(newCard)
+
+  // const UpdatedCard = [...this.state.cards, newCard]
+
+  // this.setState({
+  //   cards: UpdatedCard,
+  //   //id: uuid(),
+  //   editItem: false
+  // })
+  // e.target.reset()
+}
+
+  //Here is my example
+  // editItem = id => {
+  //   console.log(id)
+  //   const editedItem = this.state.cards.filter(item => item.id !== id)
+
+  //   const selectedItem = this.state.cards.find(item => item.id === id)
+  //   console.log(selectedItem)
+
+  //   this.setState({
+  //     cards:editedItem,
+  //     item:selectedItem.title,
+  //     editItem: true,
+  //     id:id
+  //   })
+  // }
 
   handleChange = e => {
     const name = e.target.name;

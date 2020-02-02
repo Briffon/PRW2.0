@@ -9,20 +9,19 @@ import { MdEvent } from "react-icons/md";
 
 //THIS SHOULD BE NAV LINKS WITH NAV ELEMENT
 
-const NavigationLeft = props => {
+const NavigationLeft = () => {
   return (
     <nav style={styles.container} className="nav-container">
       <div style={styles.logoContainer}>
         <img
-          width="200px"
-          height="80px"
+          width="100%"
           src={require("../../images/logo/PNG/CCGW.png")}
           alt="logo"
           style={styles.logo}
         />
-        <h1 style={styles.admin}> Admin</h1>
       </div>
       <div style={styles.list}>
+        <h1 style={styles.admin}>Admin Panel</h1>
         <NavLink to="/Home" style={styles.listItem}>
           <FaHome style={styles.icon} />
           Home
@@ -52,13 +51,13 @@ export default NavigationLeft;
 
 const styles = {
   container: {
-    width: "12%",
     backgroundColor: "#172121",
     display: "flex",
     flexDirection: "column",
     alignItems: "center",
     textAlign: "left",
-    border: "none "
+    border: "none ",
+    width:"20%"
   },
   list: {
     listStyle: "none",
@@ -78,8 +77,7 @@ const styles = {
     backgroundColor: "#4EA699",
     padding: "1rem",
     textAlign: "center",
-    color: "white",
-    height: "13%"
+    color: "white"
   },
   icon: {
     margin: "auto",
@@ -90,6 +88,7 @@ const styles = {
     marginTop: ".5rem"
   },
   admin: {
-    marginTop: "0"
+    //marginTop: "0",
+    color: "white"
   }
 };

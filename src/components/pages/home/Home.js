@@ -201,7 +201,7 @@ class Home extends Component {
         <NavigationLeft />
         <div className="content">
           {localStorage.setItem("page",'Home')}
-          <Header />
+          <Header style={styles.headerCont} />
           <div className={`editModal ${editModal}`}>
             <Edit
               formErrors={this.state.formErrors}
@@ -267,5 +267,8 @@ const styles={
   eventsContainer:{
     backgroundColor:'#e8e8e8',
     padding:'1rem'
-  }
+  },
+  // cont:{
+  //   height: "12%"
+  // }
 }

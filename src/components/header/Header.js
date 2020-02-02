@@ -97,7 +97,7 @@ const styles = {
     display: "flex",
     alignItems: "center",
     justifyContent: "space-between",
-    height: "8%"
+    //height: "200px"
   },
   logo: {
     margin: "auto"
